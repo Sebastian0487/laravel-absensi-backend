@@ -64,13 +64,13 @@ class PermissionController extends Controller
         $user = User::find($userId);
         $token = $user->fcm_token;
 
-        // // Kirim notifikasi ke perangkat Android
-        // $messaging = app('firebase.messaging');
-        // $notification = Notification::create('Status Izin', $message);
+        // Kirim notifikasi ke perangkat Android
+        $messaging = app('firebase.messaging');
+        $notification = Notification::create('Status Izin', $message);
 
-        // $message = CloudMessage::withTarget('token', $token)
-        //     ->withNotification($notification);
+        $message = CloudMessage::withTarget('token', $token)
+            ->withNotification($notification);
 
-        // $messaging->send($message);
+        $messaging->send($message);
     }
 }
