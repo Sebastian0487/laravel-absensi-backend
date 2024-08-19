@@ -24,12 +24,12 @@ class DatabaseSeeder extends Seeder
 
         // data dummy for company
         \App\Models\Company::create([
-            'name' => 'PT. FIC16',
-            'email' => 'fic16@codewithbahri.com',
-            'address' => 'Jl. Raya Kedung Turi No. 20, Sleman, DIY',
-            'latitude' => '-7.747033',
-            'longitude' => '110.355398',
-            'radius_km' => '0.5',
+            'name' => 'Perpustakaan dan Galeri Kota Bogor',
+            'email' => 'sebastiangugun@gmail.com',
+            'address' => 'Sukajadi, Kec. Tamansari, Kabupaten Bogor, Jawa Barat 16610',
+            'latitude' => '-6.648384',
+            'longitude' => '106.722253',
+            'radius_km' => '4',
             'time_in' => '08:00',
             'time_out' => '15:00',
         ]);
