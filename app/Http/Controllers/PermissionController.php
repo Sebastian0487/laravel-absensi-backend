@@ -48,14 +48,6 @@ class PermissionController extends Controller
         $this->sendNotificationToUser($permission->user_id, 'Status Izin anda adalah ' . $str);
         return redirect()->route('permissions.index')->with('success', 'Permission updated successfully');
     }
-    //destroy
-    public function destroy($id)
-    {
-        $permission = Permission::findOrFail($id);
-        $permission->delete();
-        
-        return redirect()->route('permissions.index')->with('success', 'Permission deleted successfully');
-    }
 
     public function sendNotificationToUser($userId, $message)
     {

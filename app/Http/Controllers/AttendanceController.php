@@ -18,20 +18,4 @@ class AttendanceController extends Controller
             })->orderBy('id', 'desc')->paginate(10);
         return view('pages.absensi.index', compact('attendances'));
     }
-    //UPDATE
-      public function update(Request $request, $id)
-    {
-        $attendance = Attendance::find($id);
-        $attendance->is_approved = $request->is_approved;
-        $attendance->save();
-        return redirect()->route('attendances.index')->with('success', 'Attendance updated successfully');
-    }
-    //destroy
-    public function destroy($id)
-    {
-        $attendance = Attendance::findOrFail($id);
-        $attendance->delete();
-        
-        return redirect()->route('attendances.index')->with('success', 'Attendance deleted successfully');
-    }
 }
