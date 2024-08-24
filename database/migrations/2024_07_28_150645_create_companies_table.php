@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Http\Controllers\CompanyController;
 
 return new class extends Migration
 {
@@ -26,7 +25,7 @@ return new class extends Migration
             $table->string('radius_km');
             //time_in (format: 08:00)
             $table->string('time_in');
-            //time_out (format: 15:00)
+            //time_out (format: 17:00)
             $table->string('time_out');
 
             $table->timestamps();

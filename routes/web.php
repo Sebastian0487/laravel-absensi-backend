@@ -6,14 +6,12 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\PermissionController;
 
-
 Route::get('/', function () {
     return view('pages.auth.auth-login');
 });
 
-
-Route::middleware(['auth'])->group(function(){
-    Route::get('home',function(){
+Route::middleware(['auth'])->group(function () {
+    Route::get('home', function () {
         return view('pages.dashboard', ['type_menu' => 'home']);
     })->name('home');
 

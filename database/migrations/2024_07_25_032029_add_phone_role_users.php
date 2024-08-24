@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             //
             $table->string('phone')->nullable();
-            $table->string('role')->default('users');
+            $table->string('role')->default('user');
         });
     }
 
@@ -27,7 +27,6 @@ return new class extends Migration
             //
             $table->dropColumn('phone');
             $table->dropColumn('role');
-
         });
     }
 };
